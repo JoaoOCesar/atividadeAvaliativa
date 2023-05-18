@@ -11,11 +11,21 @@ public class Turma {
 	}
 	
 	public void adicionarAlunos(Aluno aluno) {
-		for(int i=0; i<listaAlunos.size();i++) {
-			if(listaAlunos.get(i).getCodigo()==aluno.getCodigo()) {
-				
+		if(!listaAlunos.isEmpty()) {
+			for(int i=0; i<listaAlunos.size();i++) {
+				if(listaAlunos.get(i).getCodigo()==aluno.getCodigo()) {
+					System.out.println("Aluno ja cadastrado");
+					return;
+				}else {
+					listaAlunos.add(aluno);
+					return;
+					}
 			}
 		}
+		listaAlunos.add(aluno);
+		System.out.println("Aluno adicionado");
+		
+		
 		}
 	
 	public void removerAluno(int codigo) {
@@ -33,28 +43,39 @@ public class Turma {
 		for(int i=0; i<listaAlunos.size();i++) {
 			if(listaAlunos.get(i).getCodigo()==codigo) {
 				listaAlunos.get(i).exibirInfo();
+				return;
 			}
 		}
 		System.out.println("Aluno nao encontrado!");
 	}
 	
-	public void editarInfo(int codigo) {
+	public void editarInfo(int x,int codigo) {
 		Scanner lerDados = new Scanner(System.in);
 		
-		for(int i=0; i<listaAlunos.size();i++) {
-			if(listaAlunos.get(i).getCodigo()==codigo) {
-				System.out.println("Novo nome do aluno");
-				String nome = lerDados.next();
-				System.out.println("Novo CPF");
-				int CPF = lerDados.nextInt();
-				
-				listaAlunos.get(i).setNome(nome);
-				listaAlunos.get(i).setCpf(CPF);
-				
-				System.out.println("Mudanças feitas com exito!");
+		if(x==1) {
+			for(int i=0; i<listaAlunos.size();i++) {
+				if(listaAlunos.get(i).getCodigo()==codigo) {
+					System.out.println("Digite a nota");
+					double nota = lerDados.nextDouble();
+					listaAlunos.get(i).adicionarNota(nota);
+					System.out.println("Nota adicionada!");
+					return;
+				}
 			}
+			System.out.println("Aluno nao encontrado!");
+		}else if(x==2){
+			for(int i=0; i<listaAlunos.size();i++) {
+				if(listaAlunos.get(i).getCodigo()==codigo) {
+					System.out.println("Digite qual nota deseja remover");
+					int nota = lerDados.nextInt();
+					listaAlunos.get(i).removerNota(nota-1);
+					return;
+				}
+			}
+			System.out.println("Aluno nao encontrado!");
 		}
-		System.out.println("Aluno nao encontrado!");
+		
+		
 	}
 	
 	public void listarAlunos() {
@@ -67,7 +88,9 @@ public class Turma {
 		else {
 			System.out.println("Nenhum aluno matriculado!");
 		}
+	
 	}
+	
 	
 	
 }

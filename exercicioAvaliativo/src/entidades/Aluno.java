@@ -36,45 +36,63 @@ public class Aluno extends Pessoa {
 	}
 	
 	public void removerNota(int indice) {
-		for(int i=0; i<listaNotas.size();i++) {
-			if(listaNotas.get(i) == indice) {
-				System.out.println((1+i) + "° Nota removida com sucesso!");
-				listaNotas.remove(i);
-				return;
+		if(!listaNotas.isEmpty()) {
+			for(int i=0; i<listaNotas.size();i++) {
+				if(listaNotas.get(i) == indice) {
+					System.out.println((1+i) + "° Nota removida com sucesso!");
+					listaNotas.remove(i);
+					return;
+				}
 			}
+			System.out.println("Nota nao encontrada!");
+		}else {
+			System.out.println("Nenhuma nota cadastrada!");
 		}
-		System.out.println("Nota nao encontrada");
+		
 	}
 	
 	public void listarNotas() {
-		for(int i=0; i<listaNotas.size();i++) {
-			System.out.println("--------Notas--------");
-			System.out.println((1+i)+"° NOTA: " + listaNotas.get(i));
+		if(!listaNotas.isEmpty()) {
+			for(int i=0; i<listaNotas.size();i++) {
+				System.out.println("--------Notas--------");
+				System.out.println((1+i)+"° NOTA: " + listaNotas.get(i));
+			}
+		}else {
+			return;
 		}
+		
 	}
 	
 	
 	public void calculaMedia(){
 		double soma=0;
-		for(int i=0; i<listaNotas.size();i++) {
-			soma = soma+listaNotas.get(i);
-		}
-		media=soma/listaNotas.size();
-		
-		if(media>=6) {
-			System.out.println("Aluno Aprovado!");
+		if(listaNotas.isEmpty()) {
+			System.out.println("Nenhuma nota registrada para o(a) aluno(a)");
+			
 		}else {
-			System.out.println("Aluno Reprovado!");
+			for(int i=0; i<listaNotas.size();i++) {
+				soma = soma+listaNotas.get(i);
+			}
+			media = soma/listaNotas.size();
+			
+			System.out.println("Media Atual: " + media);
+			
+			if(media>=6) {
+				System.out.println("Aluno Aprovado!");
+			}else {
+				System.out.println("Aluno Reprovado!");
+			}
 		}
+		
 	}
 	
 	@Override
 	public void exibirInfo() {
 		System.out.println("Nome do Aluno: " + getNome());
 		System.out.println("Numero da Chamada: " + codigo);
-		System.out.println("Disciplina sendo cursada pelo Aluno: " + disciplina);
+		System.out.println("Disciplina sendo cursada pelo Aluno: " + disciplina.getDisciplina());
 		listarNotas();
-		System.out.println("Media Atual: " + media);
+		calculaMedia();
 	}
 		
 }
