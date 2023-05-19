@@ -1,0 +1,31 @@
+@media only screen and (max-width: 900px){
+    .container1{
+        flex-direction: column;
+    }
+    .banner{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }  
+    .noticias-laterais{
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    .card1{
+        margin-top: 10;
+    }
+    .container2{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        height: 1000px;
+        align-items: center;
+    }
+    .footer1{
+        width: 100%;
+        flex-direction: column;
+    }
+}

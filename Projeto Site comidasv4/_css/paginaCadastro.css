@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif; 
+}
+
+header {
+    background: black;
+    height: 60px;
+    display: flex;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    flex: 0 1 200px;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+}
+
+header .logo {
+    text-decoration: none;
+}
+
+.logo span {
+    color: rgb(255, 174, 0);
+}
+
+.pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesquisa>input {
+    outline: none;
+    text-align: center;
+    border: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    width: 300px;
+    height: 20px;
+}
+
+.menu {
+    display: flex;
+    flex: 1 1 200px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu>a {
+    display: block;
+    margin: 0 3%;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+.menu>a:hover {
+    scale: 1.2;
+    transition: 0.3s;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    width: 80%;
+    margin: 10px auto;
+    background: rgba(91, 91, 91, 0.217);
+    border-radius: 10px;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.banner {
+    float: left;
+    margin: 10px 0 0 10px;
+    background-image: url(../_img/chewbacca-peter-mayhew-e-han-solo-harrison-ford-em-star-wars-1620346565224_v2_900x506.jpg);
+    background-size: 600px;
+    height: 340px;
+    width: 600px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.text-banner {
+    width: 600px;
+    height: 60px;
+    background-color: rgb(14, 14, 14);
+    position: relative;
+    top: 330px;
+    line-height: 15px;
+    font-size: 14px;
+}
+
+.text-banner span {
+    color: rgb(255, 174, 0);
+}
+
+.noticias-laterais {
+    float: right;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 37%;
+    height: 400px;
+    margin: 5px;
+}
+
+.noticias-laterais>h3 {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: black;
+    border-radius: 10px 10px 0 0;
+}
+
+.noticias-laterais>h3>span {
+    color: rgb(255, 174, 0);
+}
+
+.card1 {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 10px;
+    background: rgba(0, 0, 0, 0.68);
+}
+
+.card1>a>img {
+    position: relative;
+    height: 120px;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 200px;
+    width: 100%;
+    color: white;
+}
+
+.footer1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.esq{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: lighter;  
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 500px;  
+}
+
+.esq h2{
+    margin-bottom: 5px;
+}
+
+.sociais{
+    display: flex;
+    flex-direction: row;
+}
+
+.sociais>a>img{
+    height: 30px;
+    filter: invert(1);
+    transition: 0.3s;
+}
+
+.sociais>a>img:hover{
+    scale: 1.2;
+    transition: 0.3s;
+}
+
+.esq>input{
+    margin: 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    height: 20px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.esq>button{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif ;
+    background-color:  rgb(255, 174, 0);
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.esq>h2>span{
+    color: rgb(255, 174, 0);
+}
+
+.container2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 400px;
+}
+
+.container2 > .n1{
+    margin-left:30px ;
+    width: 30%;
+    height: 300px;
+    align-self: center;
+}
+
+.container2 > .n1 > img{
+    height: 100%;
+}
+
+.container2 > .n2{
+    background: url(../_img/senhor-dos-anéis-30mar2023-Warner-Bros.-reprodução-960x540.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0px 0px ;
+    margin-left: 30px;
+    width: 60%;
+    display: flex;
+}
+
+.container2 > .n2 >div{
+    background: black;
+    width: 100%;
+    height: 90px;
+    align-self: flex-end;
+    text-align: justify;
+}
+
+.container2 > .n2 >div> p{
+    font-size: 13px;
+}
+
+.container2 > .n2 > div > h4{
+    color: rgb(255, 174, 0);
+}
+
+/* SLIDES IMGS */
+
+.carrossel {
+    align-self: center;
+    position: relative;
+    justify-content: center;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /*especifica se os itens flexíveis devem ser encapsulados ou não. */
+    margin: 5px;    
+    /* border: #e33c09 solid 3px; */
+}
+
+/* CARROSSEL SLIDE -- INICIO */
+.slide_container {
+    margin-top: 40px;
+    position: relative;
+    width: 75%;
+    height: 400px;
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    animation: 12s ease-in-out sliding infinite;
+}
+
+.slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+}
+
+.imagem{
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+
+@keyframes sliding {
+    0% {
+        transform: translateX(0%);
+    }
+
+    5% {
+        transform: translateX(0%);
+    }
+
+    35% {
+        transform: translateX(-100%);
+    }
+
+    45% {
+        transform: translateX(-100%);
+    }
+
+    70% {
+        transform: translateX(-200%);
+    }
+
+    80% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+
+}
